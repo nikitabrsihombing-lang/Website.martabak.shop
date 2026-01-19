@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martabak Lezat</title>
+
+<style>
+
+/* --------------------- COLOR THEME --------------------- */
+:root {
+    --bg: #f7ead9;
+    --bg-light: #fff7ed;
+    --brown: #a67346;
+    --brown-dark: #744c28;
+    --brown-light: #d9b18c;
+    --text: #4a3522;
+    --white: #ffffff;
+}
+
+/* --------------------- GLOBAL --------------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 32px;
+    border-left: 6px solid var(--brown);
+    padding-left: 12px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 12%;
+    background: var(--bg);
+}
+
+/* --------------------- NAVBAR --------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--brown-dark);
+    padding: 15px 12%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+.navbar a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.navbar a:hover {
+    color: var(--brown-light);
+}
+
+/* --------------------- LOGIN FORM --------------------- */
+.login-box {
+    max-width: 420px;
+    background: var(--white);
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 2px solid var(--brown-light);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background: var(--brown-dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.login-box button:hover {
+    background: var(--brown);
+}
+
+/* --------------------- PRODUCT CARDS --------------------- */
+.product-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--brown-dark);
+}
+
+.promo a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* --------------------- NAV BUTTONS --------------------- */
+.nav-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background: var(--brown-dark);
+    padding: 12px 22px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: var(--brown);
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="#login">Login</a>
+    <a href="#home">Home</a>
+    <a href="#profil">Profil</a>
+    <a href="#produk">Produk</a>
+    <a href="#logout">Logout</a>
+</div>
+
+
+<!-- ================================================================= -->
+<!-- ========================== LOGIN FIRST ============================ -->
+<!-- ================================================================= -->
+<section id="login">
+    <h1>Login</h1>
+
+    <div class="login-box">
+        <label>Username</label>
+        <input type="text" placeholder="Martabak">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enak">
+
+        <button>Login</button>
+    </div>
+
+    <div class="nav-buttons">
+        <span></span>
+        <a class="btn" href="#home">Next ➜</a>
+    </div>
+</section>
+
+
+
+<!-- ================================================================= -->
+<!-- ============================= HOME ================================ -->
+<!-- ================================================================= -->
+<section id="home" class="hero">
+    <h1>Martabak Lezat Premium</h1>
+
+    <marquee style="color:red; font-size:20px; font-weight:bold;">
+        PROMO BESAR! Diskon 50% Semua Martabak Hari Ini!
+    </marquee>
+
+    <p>Martabak manis dan telur premium dengan bahan pilihan terbaik.</p>
+
+    <div class="nav-buttons">
+        <a class="btn" href="#login">⬅ Back</a>
+        <a class="btn" href="#profil">Next ➜</a>
+    </div>
+</section>
+
+
+<!-- ================================================================= -->
+<!-- ========================== PROFIL ================================ -->
+<!-- ================================================================= -->
+<section id="profil">
+    <h1>Profil Bisnis</h1>
+    <p>
+        Kami UMKM martabak premium sejak 2010.  
+        Mengutamakan bahan berkualitas dan rasa istimewa.
+    </p>
+
+    <div class="nav-buttons">
+        <a class="btn" href="#home">⬅ Back</a>
+        <a class="btn" href="#produk">Next ➜</a>
+    </div>
+</section>
+
+
+<!-- ================================================================= -->
+<!-- =========================== PRODUK =============================== -->
+<!-- ================================================================= -->
+<section id="produk">
+    <h1>Produk Martabak</h1>
+
+    <div class="product-container">
+
+        <div class="card">
+            <h3>Martabak Manis Cokelat Keju</h3>
+            <p>Harga: Rp 25.000</p>
+            <p class="promo">
+                <a href="https://contoh-website-diskon.com" target="_blank">Diskon 50% ➜ Klik di sini</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Martabak Telur Spesial</h3>
+            <p>Harga: Rp 30.000</p>
+            <p class="promo">
+                <a href="https://contoh-website-diskon.com" target="_blank">Diskon 50% ➜ Klik di sini</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="nav-buttons">
+        <a class="btn" href="#profil">⬅ Back</a>
+        <a class="btn" href="#logout">Next ➜</a>
+    </div>
+</section>
+
+
+<!-- ================================================================= -->
+<!-- =========================== LOGOUT =============================== -->
+<!-- ================================================================= -->
+<section id="logout">
+    <h1>Logout</h1>
+    <p>Anda berhasil keluar dari sistem.</p>
+
+    <div class="nav-buttons">
+        <a class="btn" href="#produk">⬅ Back</a>
+        <span></span>
+    </div>
+</section>
+
+</body>
+</html>

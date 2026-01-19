@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Martabak Shop</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Styling halaman produk */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8e1;
+    }
+
+    main {
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #8B4513;
+    }
+
+    /* Container untuk semua gambar ke samping */
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* supaya turun ke bawah kalau layarnya kecil */
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .item {
+      text-align: center;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 140px;
+    }
+
+    .item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .item p.nama {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #8B4513;
+    }
+
+    .item p.harga {
+      margin-top: 3px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    header {
+      background-color: #b5651d;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Our Martabak Products</h1>
+    <p>Enjoy our special sweet and savory martabak menu!</p>
+
+    <div class="container">
+      <div class="item">
+        <img src="martabak2.jpg" alt="coklat keju">
+        <p class="nama">Martabak Coklat Keju</p>
+        <p class="harga">Rp35.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak telur.jpg" alt="telur">
+        <p class="nama">Martabak Telur</p>
+        <p class="harga">Rp25.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak nutela.jpg" alt="nutela">
+        <p class="nama">Martabak Nutella</p>
+        <p class="harga">Rp40.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak taro keju.jpg" alt="taro keju">
+        <p class="nama">Martabak Taro Keju</p>
+        <p class="harga">Rp45.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak campuran.jpg" alt="campuran">
+        <p class="nama">Martabak Campuran</p>
+        <p class="harga">Rp55.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak coklat.jpg" alt="coklat">
+        <p class="nama">Martabak Coklat</p>
+        <p class="harga">Rp48.000</p>
+      </div>
+      <div class="item">
+        <img src="martabak telurrrr.jpg" alt="telurrrr">
+        <p class="nama">Martabak Telur Spesial</p>
+        <p class="harga">Rp35.000</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Fungsi Logout agar kembali ke halaman login
+    document.getElementById("logout").addEventListener("click", function() {
+      alert("Anda telah logout.");
+      window.location.href = "index.html"; // arahkan ke halaman login
+    });
+  </script>
+
+</body>
+</html>
